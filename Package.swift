@@ -1,21 +1,13 @@
-// swift-tools-version:5.9
+// swift-tools-version: 6.2
+
 import PackageDescription
 
 let package = Package(
-    name: "SpreadsheetView",
-    platforms: [
-        .iOS(.v12),
-    ],
-    products: [
-        .library(
-            name: "SpreadsheetView",
-            targets: ["SpreadsheetView"]),
-    ],
-    targets: [
-        .target(
-            name: "SpreadsheetView",
-            path: "Framework/Sources"
-        )
-    ]
-)
+  name: "SpreadsheetView",
+  products: [
+    .library(name: "SpreadsheetView", targets: ["SpreadsheetView"]),
+  ],
+  targets: [
+    .target(name: "SpreadsheetView", path: "Framework/Sources", exclude: ["Info.plist", "SpreadsheetView.h"]),
+  ]
 )
