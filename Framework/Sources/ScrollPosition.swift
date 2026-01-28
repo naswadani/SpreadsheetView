@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct ScrollPosition: OptionSet {
+public struct ScrollPosition: OptionSet, Sendable {
     // The vertical positions are mutually exclusive to each other, but are bitwise or-able with the horizontal scroll positions.
     // Combining positions from the same grouping (horizontal or vertical) will result in an NSInvalidArgumentException.
     public static let top = ScrollPosition(rawValue: 1 << 0)
