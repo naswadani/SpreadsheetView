@@ -1,4 +1,3 @@
-//
 //  Cell.swift
 //  SpreadsheetView
 //
@@ -97,7 +96,7 @@ open class Cell: UIView {
     }
 }
 
-@MainActor extension Cell: Comparable {
+extension Cell: Comparable {
     public static func < (lhs: Cell, rhs: Cell) -> Bool {
         lhs.indexPath < rhs.indexPath
     }
@@ -106,6 +105,5 @@ open class Cell: UIView {
         lhs.indexPath == rhs.indexPath
     }
 }
-
 
 final class BlankCell: Cell {}
