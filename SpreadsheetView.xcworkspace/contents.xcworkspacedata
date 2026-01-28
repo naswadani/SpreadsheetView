@@ -5,6 +5,9 @@
       location = "container:"
       name = "Framework">
       <FileRef
+         location = "group:Package.swift">
+      </FileRef>
+      <FileRef
          location = "group:Framework/SpreadsheetView.xcodeproj">
       </FileRef>
    </Group>
