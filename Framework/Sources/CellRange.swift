@@ -8,14 +8,28 @@
 
 import UIKit
 
-public final class CellRange {
+public final class CellRange: @unchecked Sendable {
     public let from: Location
     public let to: Location
 
     public let columnCount: Int
     public let rowCount: Int
 
-    var size: CGSize?
+    private let lock = NSLock()
+    private var _size: CGSize?
+    
+    var size: CGSize? {
+        get {
+            lock.lock()
+            defer { lock.unlock() }
+            return _size
+        }
+        set {
+            lock.lock()
+            defer { lock.unlock() }
+            _size = newValue
+        }
+    }
 
     public convenience init(from: (row: Int, column: Int), to: (row: Int, column: Int)) {
         self.init(from: Location(row: from.row, column: from.column),

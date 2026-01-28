@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct Location: Hashable {
+public struct Location: Hashable, Sendable {
     public let row: Int
     public let column: Int
 

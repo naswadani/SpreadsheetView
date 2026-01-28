@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Address: Hashable {
+struct Address: Hashable, Sendable {
     let row: Int
     let column: Int
     let rowIndex: Int
