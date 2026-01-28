@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:Package.swift">
+   </FileRef>
    <Group
       location = "container:"
       name = "Framework">
-      <FileRef
-         location = "group:Package.swift">
-      </FileRef>
       <FileRef
          location = "group:Framework/SpreadsheetView.xcodeproj">
       </FileRef>
